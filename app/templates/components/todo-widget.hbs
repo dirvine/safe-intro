@@ -1,0 +1,7 @@
+{{add-todo onAdd=(action 'addTodo')}}
+<ul>
+{{#each todos as |todo|}}
+  <li>{{ todo.text }} <span style="color:#F20C0C" >by</span> {{ todo.email }}</li>
+{{/each}}
+</ul>
+    

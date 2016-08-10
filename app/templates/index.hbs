@@ -1,0 +1,71 @@
+
+<div class="container-fluid">
+  <div class="row">
+  <div class="col-sm-4">
+	<img src='assets/images/maidsafe.png' class="img-fluid"  alt="Reponsive image">
+  <p class="heading-1"> A world wide network, for the 21st centuary. </p>
+   </div>
+  <div class="col-sm-8">
+  <h1 class="heading-1">SAFE network overview.</h1> 
+  {{#bs-accordion selected=selected}} {{#bs-accordion-item value="what" title="What?"}}
+  <p>The free software sytem known as SAFE (Secure Access For Everyone) is a new network made possible by 
+        efficiently combining the unused 
+        hard drive space, 
+        CPU power and 
+        Internet connections of its users. 
+     A global network without servers. it offers a level of security and privacy not 
+     available on the existing Internet. 
+     Users of the SAFE Network have full control over their data, 
+     while software developers can focus their time building on top of a secure infrastructure.</p>
+    
+  {{/bs-accordion-item}} {{#bs-accordion-item value="why" title="Why?"}}
+  <p><b>SAFE gives people full control of their own data on a secure Internet.</b></p>
+<p></p>
+    <p>The current Internet services are just not working for us. </p>
+    <p>Servers simply cannot be secured.</p>
+    <p>Passwords will always be stolen.</p>
+    <p>SAFE has no servers. </p>
+    <p>SAFE never transmits of stores passwords.</p>
+
+     <p>SAFE has built in privacy as well as built in security. No more corporations such as Google or Facebook required to hold YOUR data (they have better things to do). No more Dark web required. Your network under
+    your control. Your life under your control. The SAFE network is here and we believe that we’ve made the internet a more trusted, secure and private place, just as it was meant to be.</p>
+  {{/bs-accordion-item}} {{#bs-accordion-item value="who" title="Who?"}}
+  <p>Started in 2006 by Scottish engineer David Irvine, MaidSafe is a small team of around 20 staff (and growing), comprised of: thinkers, inventors, tinkerers, PHDs, engineers and designers. Based in Troon, Scotland, we have drawn talents from many different cultures and countries,
+    reflecting the users that we serve. Despite this variety, we all share a mission: a desire to provide security and privacy for everyone..</p>
+   <p>In additon there is a vibrant and helpfull community on the <a href='http://forum.safenetwork.io' target="blank"> the community forums</a></P>
+  {{/bs-accordion-item}} {{#bs-accordion-item value="where" title="Where?"}}
+  <p>Based in Scotland with staff worldwide</p>
+  <p class="just-para">We have our head ofice in Troon, on the West coast of Scotland. This houses 
+    around 40% of the team with Engineers working remotely from across Europe, Brazil, China, India and  
+     worldwide. Please use the button below for further details on contacting us. </p>
+  {{/bs-accordion-item}} {{#bs-accordion-item value="when" title="When?"}}
+  <p class="just-para">We have completed 7 test networks so far and now we are currently at Alpha release (a testing mode).</p>
+  <p class="just-para">Having just recently taken in more capital and with continued fund raising the team is at last being 
+    increased. We have been working on this project for over 10 years now and are no strangers to 
+    the frustration delays cause. However, in saying that, the recent increased community involvement, Alpha
+    launch and encouraging developents leads us to be very optmistic for the near term future.</p>
+    <p class="just-para"> We recodnise small teams cannot take on the world, neither can a single company. This is why
+      all code is free software and we encourage contributions parterships and even competition.</p>
+      <p class="just-para"> In terms of completion of a fully released network, we can all hope for the help and dedciation 
+        of the team and other like minded individuals that, full launch is easily within our grasp. 
+        We will then see the innovation of millions of people coming together on a free, simple and
+        very powerful network. We do not know how long, but we know we will work and encourage others to do 
+        the same. The world needs SAFE and it needs it now!</P>
+    <p class="just-para">Passing Alpha has been a massive step, now incremental roll-outs will allow mainstream adoption</p> 
+
+  {{/bs-accordion-item}} {{/bs-accordion}}
+
+  {{#if selected}}
+  <p>{{#link-to selected class="btn btn-info btn-lg" role="buton"}}Would you like to more about "{{selected}}" »{{/link-to}}</p>
+  {{/if}}
+  </div>
+  </div>
+</div>
+{{outlet}}
+{{role-selector}}
+
+    <footer>
+      <p>© This work is licensed under a Creative Commons Attribution 4.0 International License.</p>
+    </footer>
+
+<
