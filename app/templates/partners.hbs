@@ -1,16 +1,34 @@
 <div class="container-flud">
 {{#bs-tab customTabs=true as |activeId select|}}
  <div class="nav nav-sidebar col-sm-3 col-md-2 sidebar">
-   {{#bs-nav class="nav-stacked" type="pills stacked"}}
-       {{#bs-nav-item active=(bs-eq activeId "pane1")}}<a href="#pane1" class="sidebar" role="button" 
-                                                 {{action select "pane1"}}>Code Samples</a>{{/bs-nav-item}}
-       {{#bs-nav-item active=(bs-eq activeId "pane2")}}<a href="#pane1" class="sidebar" role="button" 
+   {{#bs-nav class="nav-stacked" type="tabs"}}
+       {{#bs-nav-item active=(bs-eq activeId "choose")}}<a href="#pane1" class="sidebar" role="button" 
+                                                 {{action select "pane1"}}>Harware Partners</a>{{/bs-nav-item}}
+       {{#bs-nav-item active=(bs-eq activeId "choose")}}<a href="#pane1" class="sidebar" role="button" 
+                                                 {{action select "pane1"}}>Oem Partners</a>{{/bs-nav-item}}
+       {{#bs-nav-item active=(bs-eq activeId "choose")}}<a href="#pane1" class="sidebar" role="button" 
+                                                 {{action select "pane1"}}>IaaS Partners</a>{{/bs-nav-item}}
+       {{#bs-nav-item active=(bs-eq activeId "help")}}<a href="#pane1" class="sidebar" role="button" 
+                                                 {{action select "pane1"}}>PaaS Partners</a>{{/bs-nav-item}}
+       {{#bs-nav-item active=(bs-eq activeId "samples")}}<a href="#pane1" class="sidebar" role="button" 
+                                                 {{action select "pane1"}}>Medical industry</a>{{/bs-nav-item}}
+       {{#bs-nav-item active=(bs-eq activeId "papers")}}<a href="#pane1" class="sidebar" role="button" 
+                                                  {{action select "pane2"}}>Education</a>{{/bs-nav-item}}                                               
+       {{#bs-nav-item active=(bs-eq activeId "papers")}}<a href="#pane1" class="sidebar" role="button" 
+                                                  {{action select "pane2"}}>Licensing</a>{{/bs-nav-item}}
+       {{#bs-nav-item active=(bs-eq activeId "papers")}}<a href="#pane1" class="sidebar" role="button" 
+                                                  {{action select "pane2"}}>Consulting</a>{{/bs-nav-item}}
+       {{#bs-nav-item active=(bs-eq activeId "papers")}}<a href="#pane1" class="sidebar" role="button" 
+                                                  {{action select "pane2"}}>Supporter/Investor</a>{{/bs-nav-item}}
+       {{#bs-nav-item active=(bs-eq activeId "papers")}}<a href="#pane1" class="sidebar" role="button" 
                                                   {{action select "pane2"}}>Papers</a>{{/bs-nav-item}}
    {{/bs-nav}}
- </div>
+ </div> <!-- navbar -->
+
+
    <div class="tab-content col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
    {{#bs-tab-pane elementId="pane1" title="Tab 1"}}
-       <p>..onemmmmmmmmm.</p>
+       <p>Samples here</p>
    {{/bs-tab-pane}}
    {{#bs-tab-pane elementId="pane2" title="Tab 2"}}
        <p>.two..</p>
