@@ -1,0 +1,55 @@
+
+{{#bs-tab customTabs=true as |activeId select|}}
+   {{#bs-nav type="tabs"}}
+       {{#bs-nav-item active=(bs-eq activeId "rust")}}<a href="#/developers" role="tab" {{action select "javascript"}}>Rust</a>{{/bs-nav-item}}
+       {{#bs-nav-item active=(bs-eq activeId "cpp")}}<a href="#/developers" role="tab" {{action select "javascript"}}>c++</a>{{/bs-nav-item}}
+      
+       {{#bs-nav-item active=(bs-eq activeId "javascript")}}<a href="#/developers" role="tab" {{action select "javascript"}}>JavaScript</a>{{/bs-nav-item}}
+       {{#bs-nav-item active=(bs-eq activeId "python")}}<a href="#/developers" role="tab" {{action select "python"}}>Python<span class="badge">{{badge}}</span></a>{{/bs-nav-item}}
+   {{/bs-nav}}
+
+   <div class="tab-content">
+   {{#bs-tab-pane elementId="javascript" title="Tab 1"}}
+       <pre> 
+var request = require('request');
+
+var endPoint = 'http://localhost:8100/auth';
+
+// authorisation payload
+var payload = {
+  "app": {
+    "name":"Sample Application",
+    "id":"com.maidsafe.sample",
+    "version":"0.0.1",
+    "vendor":"MaidSafe"
+  },
+  "permissions": [
+    "SAFE_DRIVE_ACCESS"
+  ]
+};
+
+var onResponse = function(err, response, body) {
+  if (err) {
+    return console.error(err.message);
+  }
+  if (response.statusCode === 401) {
+    return console.error('Failed to authorise');
+  }
+  console.log('Auth token', body.token);
+};
+
+request.post(endPoint, {  
+  json: true,
+  body: payload
+}, onResponse);
+</pre>
+   {{/bs-tab-pane}}
+   {{#bs-tab-pane elementId="python" title="Tab 2"}}
+       <p>...</p>
+   {{/bs-tab-pane}}
+   </div>
+{{/bs-tab}}
+
+
+
+{{outlet}}

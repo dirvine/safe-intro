@@ -15,6 +15,9 @@ Router.map(function() {
   this.route('when');
   this.route('who');
 
+  this.route('consumers');
+  this.route('developers');
+  this.route('partners');
 });
 
 export default Router;

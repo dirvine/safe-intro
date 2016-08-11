@@ -1,0 +1,20 @@
+<div class="container-flud">
+{{#bs-tab customTabs=true as |activeId select|}}
+ <div class="nav nav-sidebar col-sm-3 col-md-2 sidebar">
+   {{#bs-nav class="nav-stacked" type="pills"}}
+       {{#bs-nav-item active=(bs-eq activeId "pane1")}}<a href="#pane1" class="sidebar" role="button" 
+                                                 {{action select "pane1"}}>Code Samples</a>{{/bs-nav-item}}
+       {{#bs-nav-item active=(bs-eq activeId "pane2")}}<a href="#pane1" class="sidebar" role="button" 
+                                                  {{action select "pane2"}}>Papers</a>{{/bs-nav-item}}
+   {{/bs-nav}}
+ </div>
+   <div class="tab-content col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+   {{#bs-tab-pane elementId="pane1" title="Tab 1"}}
+       {{code-samples}}
+   {{/bs-tab-pane}}
+   {{#bs-tab-pane elementId="pane2" title="Tab 2"}}
+       <p>.two..</p>
+   {{/bs-tab-pane}}
+   </div>
+{{/bs-tab}}
+</div>
